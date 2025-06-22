@@ -4,20 +4,28 @@
     box-sizing: border-box;
     font-family:sans-serif;
     
+    
+    
 }
 
 html {
   scroll-behavior: smooth;
+
 }
+
+
 
 .tittle{
    
-    width: 30vw;
+    /* width: 30vw; */
+    margin-right: 50px;
     height: 40px;
-    font-size: 40px;
-    text-align:center;    
+    font-size: 50px;
+    text-align:center;   
+    align-content: center; 
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 header{
@@ -26,15 +34,19 @@ header{
     background-color:#e27e72;
     color: white; 
     align-items: center;
-    width: 100vw;
-    height: 120px;
-    position: fixed;
-    z-index: 1000;
+    width: 100%;
+    /* height: 120px; */
+    padding:50px;
+    /* position: fixed;
+    z-index: 1000; */
+    
 }
+
+
 
 .browser{
     font-size: 25px;
-    padding: 50px;
+    /* padding: 50px; */
     text-align: center;
     font-weight: bold;
     
@@ -49,10 +61,11 @@ header{
 li a{
     color:white;
     padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 li a:hover{
-    border-radius: 12px;
+    border-radius: 5px;
     box-shadow: 0 6px 16px rgba(0,0,0,0.15);
     padding: 10px;
     
@@ -63,10 +76,13 @@ a{
 }
 
 main{
-    width: 1200px;  
+
+    width:100%; 
+    max-width: 1200px; 
     margin: 0 auto;
+    padding: 0 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-    margin-top: 160px;
+    /* margin-top: 160px; */
 }
 
 .tittle_2{
@@ -82,7 +98,8 @@ main{
 
 .Distributors{
     display: grid;
-    grid-template-columns:repeat(3, 1FR);
+    /*grid-template-columns:repeat(3, 1Fr);*/
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 70px 50px;
     justify-items: center;
     background-color: #FFFFFF;
@@ -120,7 +137,7 @@ body{
     flex-direction: column;
     align-items: center;
     background-color:#0000;
-    
+    overflow-x: hidden;
 }
 
 
@@ -144,13 +161,16 @@ button:hover{
 
 
 .Types{
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     margin-top: 150px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
+    
 }
+
 
 .Types ul{
     /*list-style:none;
@@ -265,7 +285,126 @@ footer{
     padding: 15px;
     width: 100%;
     height:150px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 155px;
+}
 
+footer a{
+    list-style: none;
+    color: white;
+    font-size: 24px;
+}
+
+footer a:hover{
+    font-weight:bold;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    color: white;
+    padding: 10px;
 }
 
 
+
+
+@media (max-width: 400px) {
+  .Types {
+    padding: 0 15px;
+  }
+
+  .Types article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    margin-bottom: 40px;
+  }
+
+  .div_text {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .div_img {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .div_img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .div_text ul {
+    padding: 0;
+  }
+
+  .wp {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 1800px) {
+  header {
+    flex-wrap: wrap;
+    
+  }
+
+  .tittle {
+    /* font-size: 50px;
+    padding: 10px;
+    text-align: center; */
+    /* width: 100%; */
+    margin: 80px 0;
+  }
+
+  .browser ul {
+    /* flex-direction: column; */
+    /* gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+    align-items: center; */
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px 0;
+        justify-content: center;
+  }
+
+  .browser li a {
+    /* width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1); */
+    font-size: 20px;
+  }
+
+  .browser li a:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    color: white;
+  }
+}
+
+/* @media (max-width:1000px){
+    .browser ul{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px 0;
+        justify-content: center;
+    }
+
+    .tittle{
+        margin-bottom: 45px;
+        margin-top: 20px;
+    }
+
+    .browser li a{
+        display:flex;
+    }
+} */
